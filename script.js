@@ -79,7 +79,7 @@ getLocation.addEventListener("click", () => {
 });
 
 async function renderWeather(cords) {
-  const url = `http://api.weatherapi.com/v1/forecast.json?days=3&q=${localStorage.getItem("recentPlace") || "New York" || cords}`;
+  const url = `https://api.weatherapi.com/v1/forecast.json?days=3&q=${localStorage.getItem("recentPlace") || "New York" || cords}`;
   const options = {
     method: "GET",
     headers: {
