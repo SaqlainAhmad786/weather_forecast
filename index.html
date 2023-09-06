@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon"
+        href="https://icons-for-free.com/iconfiles/png/512/forecast+sun+weather+icon-1320184881471073011.png"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Short+Stack&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="hero-container">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" class="search" placeholder="Search for Places...">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="hero-img">
+                <img src="" alt="" class="hero-icon">
+            </div>
+            <div>
+                <div style="display: flex;">
+                    <p class="main-temp">--</p><span class="degree">&deg;C</span>
+                </div>
+                <span class="main-day"></span>
+                <span class="current-time"></span>
+            </div>
+            <hr>
+            <div class="weather-info-container">
+                <div class="weather-type-container">
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+                <div class="rain-chance-container">
+                    <img src="./rain.png" alt="">
+                    <p></p>
+                </div>
+            </div>
+            <div class="place-img">
+                <p></p>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="converter-container">
+                <div class="radio-input-wrapper">
+                    <label class="label">
+                        <input value="value-c" name="value-radio" id="value-2" class="radio-input" type="radio" checked>
+                        <div class="radio-design"></div>
+                        <div class="label-text">&deg;C</div>
+                    </label>
+                    <label class="label">
+                        <input value="value-f" name="value-radio" id="value-3" class="radio-input" type="radio">
+                        <div class="radio-design"></div>
+                        <div class="label-text">&deg;F</div>
+                    </label>
+                </div>
+            </div>
+            <div class="week-container">
+                <div class="weekday today show-info">
+                    <div class="more-details">
+                        <i class="fa-solid fa-angles-right more-info-btn"></i>
+                    </div>
+                    <div class="weekday-container-first">
+                        <span>TODAY</span>
+                        <img src="" alt="">
+                        <div class="hl-tmp">
+                            <span class="highest-tmp"></span><span>&deg;</span>-
+                            <span class="lowest-tmp"></span><span class="lowest-tmp">&deg;</span>
+                        </div>
+                    </div>
+                    <div class="weekday-container-second">
+                        <p>Condition:</p>
+                        <span class="today-quality"></span>
+                        <p>Rain Chances:</p>
+                        <span class="today-rain-chance"></span>
+                    </div>
+                </div>
+                <div class="weekday tomorrow">
+                    <div class="more-details">
+                        <i class="fa-solid fa-angles-right more-info-btn"></i>
+                    </div>
+                    <div class="weekday-container-first">
+                        <span class="tomorrow-day"></span>
+                        <img src="" alt="">
+                        <div class="hl-tmp">
+                            <span class="highest-tmp"></span><span>&deg;</span>-
+                            <span class="lowest-tmp"></span><span class="lowest-tmp">&deg;</span>
+                        </div>
+                    </div>
+                    <div class="weekday-container-second">
+                        <p>Condition:</p>
+                        <span class="tomorrow-quality"></span>
+                        <p>Rain Chances:</p>
+                        <span class="tomorrow-rain-chance"></span>
+                    </div>
+                </div>
+                <div class="weekday day-after-tomorrow">
+                    <div class="more-details">
+                        <i class="fa-solid fa-angles-right more-info-btn"></i>
+                    </div>
+                    <div class="weekday-container-first">
+                        <span class="after-tomorrow-day"></span>
+                        <img src="" alt="">
+                        <div class="hl-tmp">
+                            <span class="highest-tmp"></span><span>&deg;</span>-
+                            <span class="lowest-tmp"></span><span class="lowest-tmp">&deg;</span>
+                        </div>
+                    </div>
+                    <div class="weekday-container-second">
+                        <p>Condition:</p>
+                        <span class="day-after-tomorrow-quality"></span>
+                        <p>Rain Chances:</p>
+                        <span class="day-after-tomorrow-rain-chance"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="highlights-container">
+                <h2>Today's Highlights...</h2>
+                <div class="highlights-cards">
+                    <div class="card-style uv-card">
+                        <p>UV Index</p>
+                        <span class="uv-index-count"></span>
+                        <div class="progress-bar">
+                            <div class="uv-progress-level"></div>
+                        </div>
+                    </div>
+                    <div class="card-style wind-card">
+                        <p>Wind status</p>
+                        <span class="wind-status"></span>
+                        <span class="wind-speed-unit">km/h</span>
+                        <div class="wind-direction">
+                            <i class="fa-solid fa-wind"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="card-style humidity-card">
+                        <p>Humidity</p>
+                        <span class="humidity-count"></span><span>%</span>
+                        <div class="progress-bar">
+                            <div class="humidity-progress-level"></div>
+                        </div>
+                    </div>
+                    <div class="card-style visibility-card">
+                        <p>Visibilty</p>
+                        <span class="visibility-count"></span>
+                        <span class="visibility-distance">km</span>
+                        <div class="visibility-quality">
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="card-style sun-card">
+                        <p>Sunrise & Sunset</p>
+                        <div class="sun-container">
+                            <div class="sunrise-container">
+                                <i class="fa-solid fa-sun"></i>
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span class="sunrise-time"></span>
+                            </div>
+                            <div class="sunset-container">
+                                <i class="fa-solid fa-sun"></i>
+                                <i class="fa-solid fa-arrow-down"></i>
+                                <span class="sunset-time"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-style moon-card">
+                        <p>Moon Visibility</p>
+                        <div class="sun-container">
+                            <div class="sunrise-container">
+                                <i class="fa-solid fa-moon"></i>
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span class="moonrise-time"></span>
+                            </div>
+                            <div class="sunset-container">
+                                <i class="fa-solid fa-moon"></i>
+                                <i class="fa-solid fa-arrow-down"></i>
+                                <span class="moonset-time"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
